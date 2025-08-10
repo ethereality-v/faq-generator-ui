@@ -17,10 +17,9 @@ def home():
             faq_generator.process_document(input_text)  # if file path, adjust for uploads
             result = "\n".join([f"Q: {p['question']}\nA: {p['answer']}" for p in faq_generator.faq_pairs])
     return render_template("index.html", result=result)
-
+    
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
 
 
-# push to GitHub
-# Run 'git init' in the terminal to initialize a Git repository.
