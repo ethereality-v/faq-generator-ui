@@ -1,1 +1,1 @@
-web: python FAQ_UI.py
+web: python app.py
