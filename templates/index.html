@@ -26,4 +26,14 @@
     </div>
     {% endif %}
 </body>
+<form method="POST" enctype="multipart/form-data">
+    <label>Paste Assignment Text:</label>
+    <textarea name="input_text"></textarea>
+    <br><br>
+    <label>Or upload a .pdf / .txt file:</label>
+    <input type="file" name="file" accept=".pdf,.txt" />
+    <br><br>
+    <button class="btn" type="submit">Generate FAQs</button>
+</form>    
 </html>
+
